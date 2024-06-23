@@ -106,7 +106,7 @@ def generate_summary(text: str, length: int, type: str, language: str, title: st
     if model == "OpenAI":
         # Initialize the OpenAI API client
         client = OpenAI(api_key=key)
-        MODEL = "gpt-3.5-turbo"
+        MODEL = "gpt-4o"
 
         # Prompts
         promptVideo0 = f"You will be provided with a transcript of the video{title}, and your task is to generate a very short, concise summary with a maximum of 20 words of the transcript using only 3 bullet points. The very short summary should be in {language}." # Done
@@ -117,7 +117,7 @@ def generate_summary(text: str, length: int, type: str, language: str, title: st
         promptArticle3 = f"You will be provided with the article{title}, and your task is to generate a summary of the text in {language}. If it includes a conclusion or key takeaway, make sure to include that in the end." #Done
         promptText0 = f"You will be provided with a text and your task is to generate a very short, concise summary with a maximum of 20 word of the text in {language} using only 3 bullet points."
         promptText1 = f"You will be provided with a text and your task is to generate a very short, concise summary with a maximum of 60 words of the text in {language}. If it includes a conclusion or key takeaway, make sure to include that in the end."
-        promptText3 = f"You will be provided with a text and your task is to generate a summary of the text in {language}. If it includes a conclusion or key takeaway, make sure to include that in the end."
+        promptText3 = f"You will be provided with a text and your task is to generate a detailed summary of the text in {language}. If it includes a conclusion or key takeaway, make sure to include that in the end."
         promptDocument0 = f"You will be provided with a document, and your task is to generate a very short, concise summary with a maximum of 20 word of the document in {language} using only 3 bullet points."
         promptDocument1 = f"You will be provided with a document, and your task is to generate a very short, concise summary with a maximum of 60 words of the document in {language}. If it includes a conclusion or key takeaway, make sure to include that in the end."
         promptDocument3 = f"You will be provided with a document, and your task is to generate a summary of the document in {language}. If it includes a conclusion or key takeaway, make sure to include that in the end."
